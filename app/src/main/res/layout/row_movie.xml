@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_movie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_placeholder" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imageView_movie">
+
+        <TextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingTop="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_5dp"
+            android:text="TITLE"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView_releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_title"
+            android:paddingStart="@dimen/padding_10dp"
+            android:paddingEnd="@dimen/padding_10dp"
+            android:paddingBottom="@dimen/padding_10dp"
+            android:text="DATE"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/textView_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_releaseDate"
+            android:maxLines="2"
+            android:padding="@dimen/padding_10dp"
+            android:text="OVERVIEW"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
