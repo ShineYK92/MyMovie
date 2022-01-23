@@ -22,7 +22,7 @@ public class DataRequest {
     private ArrayList<Integer> genreID;
 
     @SerializedName("id")
-    private String id;
+    private int id;
 
     @SerializedName("original_title")
     private String originalTitle;
@@ -37,16 +37,16 @@ public class DataRequest {
     private String backdropPath;
 
     @SerializedName("popularity")
-    private int  popularity;
+    private double popularity;
 
     @SerializedName("vote_count")
-    private int  voteCount;
+    private int voteCount;
 
     @SerializedName("video")
     private boolean video;
 
     @SerializedName("vote_average")
-    private int  voteAverage;
+    private double voteAverage;
 
     public String getPosterPath() {
         return posterPath;
@@ -88,11 +88,11 @@ public class DataRequest {
         this.genreID = genreID;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -128,11 +128,11 @@ public class DataRequest {
         this.backdropPath = backdropPath;
     }
 
-    public int getPopularity() {
+    public double getPopularity() {
         return popularity;
     }
 
-    public void setPopularity(int popularity) {
+    public void setPopularity(double popularity) {
         this.popularity = popularity;
     }
 
@@ -152,11 +152,11 @@ public class DataRequest {
         this.video = video;
     }
 
-    public int getVoteAverage() {
+    public double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(int voteAverage) {
+    public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }
 }

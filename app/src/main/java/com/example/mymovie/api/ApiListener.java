@@ -7,9 +7,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 public interface ApiListener {
-    @GET("movie/top_rated?")
+    @GET("top_rated?")
     Call<DataResponse> getMovieTopRateList(@Query("api_key") String apiKey,
                                            @Query("language") String language,
-                                           @Query("page") String page,
+                                           @Query("page") int page,
                                            @Query("region") String region);
 }

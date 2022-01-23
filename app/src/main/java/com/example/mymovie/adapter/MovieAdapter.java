@@ -1,5 +1,8 @@
 package com.example.mymovie.adapter;
 
+import static com.example.mymovie.util.Constant.BASE_IMAGE_URL;
+import static com.example.mymovie.util.Constant.BASE_URL;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +24,11 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
     public Context context;
     public ArrayList<DataRequest> dataRequests;
 
+    public MovieAdapter(Context context, ArrayList<DataRequest> dataRequests) {
+        this.context = context;
+        this.dataRequests = dataRequests;
+    }
+
     @NonNull
     @Override
     public MovieAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -33,7 +41,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
         final DataRequest dataRequest = dataRequests.get(position);
 
         Picasso.get()
-                .load(dataRequest.getPosterPath())
+                .load(BASE_IMAGE_URL + dataRequest.getPosterPath())
                 .placeholder(R.mipmap.ic_placeholder)
                 .error(R.mipmap.ic_placeholder)
                 .into(holder.iv_movie);
